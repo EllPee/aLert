@@ -1,0 +1,58 @@
+/* 设置全局样式（可选） */
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+/* 导航栏容器 */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    z-index: 1000; /* 确保导航栏在其他内容上方 */
+    /* 添加阴影效果 */
+    box-shadow: 0px .4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 导航栏样式 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: #232A2B;
+    padding: 10px 20px;
+    /* 设置导航栏的内边距 */
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-rechts {
+    list-style: none;
+    display: flex;
+}
+
+.nav-rechts li {
+    margin-right: 20px;
+    width: 80px;
+    text-align: center; /* 居中文本 */
+}
+
+.nav-rechts a {
+    display: block; /* 将链接设置为块级元素 */
+    color: #232A2B;
+    text-decoration: none;
+}
+
+/* 选中状态样式 */
+.nav-rechts .active {
+    color: #6C54FF;
+    font-weight: bold;
+}

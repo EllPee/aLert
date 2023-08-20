@@ -1,3 +1,121 @@
 .page-content {
-    padding-top: 80px; /* 与导航栏的高度保持一致 */
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.left-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.rounded-image {
+    width: 100%;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+    max-width: 450px;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-box {
+    padding: 20px;
+}
+
+.login-text {
+    width: 65%;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.textbox input {
+    height: 30px;
+    width: 80%;
+    min-width: 300px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #fff;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: medium;
+}
+
+.btn {
+    display: block;
+    width: 85%;
+    min-width: 330px;
+    height: 50px;
+    padding: 10px;
+    background: #ED6C36;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: medium;
+    margin-bottom: 30px;
+}
+
+.ps-vergessen {
+    color: #6C54FF;
+    font-weight: bold;
+}
+
+/* 在合适的位置添加以下媒体查询 */
+@media (max-width: 767px) {
+    .page-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section {
+        order: 2;
+        /*margin-top: 10px;*/
+    }
+
+    .right-section {
+        order: 1;
+    }
+
+    .right-section-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 在垂直方向上居中 */
+        justify-content: center; /* 在水平方向上居中 */
+        height: 100%;
+    }
+
+    .rounded-image {
+        margin-left: 0;
+    }
+}
+
+/* 在样式表中添加以下样式 */
+.password-toggle {
+    position: relative;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.password-icon {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-80%);
+    width: 20px;
+    height: auto;
+}
+

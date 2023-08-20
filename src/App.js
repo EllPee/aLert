@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import {BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, NavLink, } from 'react-router-dom';
 import './styles/css/nav.css';
 import Home from './views/home';
 import About from './views/about';
 import Help from './views/help';
 import Contact from './views/contact';
+import Dashboard from './views/dashboard';
 import alertLogo from "./styles/img/alert-logo.svg";
 import burgerIcon from "./styles/img/burgermanu.svg";
+
 
 
 function App() {
@@ -17,7 +19,6 @@ function App() {
                 setIsMenuOpen(false);
             }
         };
-
         window.addEventListener('resize', handleResize);
         // 清除事件监听器
         return () => {
@@ -61,7 +62,7 @@ function App() {
 
             {/* 弹出菜单 */}
             <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
-                <button onClick={() => setIsMenuOpen(false)}>关闭</button>
+                <button onClick={() => setIsMenuOpen(false)}>X</button>
                 <ul>
                     <li>
                         <NavLink to="/" className={({isActive}) => isActive ? 'active' : ''}
@@ -95,6 +96,7 @@ function App() {
                 <Route path="/about" element={<About/>}/>
                 <Route path="/help" element={<Help/>}/>
                 <Route path="/contact" element={<Contact/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
             </Routes>
         </Router>
     );

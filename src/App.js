@@ -1,13 +1,29 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom';
-import './styles/css/nav.css'; // 导入样式文件
+import './styles/css/nav.css';
 import Home from './views/home';
 import About from './views/about';
 import Help from './views/help';
 import Contact from './views/contact';
 import alertLogo from "./styles/img/alert-logo.svg";
+import burgerIcon from "./styles/img/burgermanu.svg";
+
 
 function App() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768 && isMenuOpen) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        // 清除事件监听器
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isMenuOpen]);
     return (
         <Router>
             <div className="navbar-container">
@@ -22,8 +38,9 @@ function App() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about" className={({isActive}) => isActive ? 'active' : ''}>Über
-                                alert</NavLink>
+                            <NavLink to="/about" className={({isActive}) => isActive ? 'active' : ''}>
+                                Über alert
+                            </NavLink>
                         </li>
                         <li>
                             <NavLink to="/help" className={({isActive}) => isActive ? 'active' : ''}>
@@ -35,9 +52,42 @@ function App() {
                                 Kontakt
                             </NavLink>
                         </li>
-
                     </ul>
+                    <div className="nav-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <img src={burgerIcon} alt="菜单图标"/>
+                    </div>
                 </nav>
+            </div>
+
+            {/* 弹出菜单 */}
+            <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
+                <button onClick={() => setIsMenuOpen(false)}>关闭</button>
+                <ul>
+                    <li>
+                        <NavLink to="/" className={({isActive}) => isActive ? 'active' : ''}
+                                 onClick={() => setIsMenuOpen(false)}>
+                            Start
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/about" className={({isActive}) => isActive ? 'active' : ''}
+                                 onClick={() => setIsMenuOpen(false)}>
+                            Über alert
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/help" className={({isActive}) => isActive ? 'active' : ''}
+                                 onClick={() => setIsMenuOpen(false)}>
+                            Hilfe
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/contact" className={({isActive}) => isActive ? 'active' : ''}
+                                 onClick={() => setIsMenuOpen(false)}>
+                            Kontakt
+                        </NavLink>
+                    </li>
+                </ul>
             </div>
 
             <Routes>

@@ -1,37 +1,27 @@
-/* 设置全局样式（可选） */
 body {
     margin: 0;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
 }
 
-/* 导航栏容器 */
 .navbar-container {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: #333;
-    z-index: 1000; /* 确保导航栏在其他内容上方 */
-    /* 添加阴影效果 */
-    box-shadow: 0px .4px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-shadow: 0 .4px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* 导航栏样式 */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    color: #232A2B;
-    padding: 10px 20px;
-    /* 设置导航栏的内边距 */
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 10px 50px;
 }
 
 .logo img {
     width: 100px;
-    height: auto;
 }
 
 .nav-rechts {
@@ -40,19 +30,99 @@ body {
 }
 
 .nav-rechts li {
-    margin-right: 20px;
-    width: 80px;
-    text-align: center; /* 居中文本 */
+    width: 85px;
+    text-align: center;
 }
 
 .nav-rechts a {
-    display: block; /* 将链接设置为块级元素 */
+    display: block;
     color: #232A2B;
     text-decoration: none;
 }
 
-/* 选中状态样式 */
 .nav-rechts .active {
     color: #6C54FF;
     font-weight: bold;
+}
+
+.nav-icon {
+    display: none; /* 默认隐藏 */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-rechts {
+        display: none;
+    }
+
+    .nav-icon {
+        display: block;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+    }
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out; /* 添加淡入淡出效果 */
+    /*box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); !* 添加左侧的阴影 *!*/
+    opacity: 0; /* 默认为透明 */
+    pointer-events: none; /* 防止干扰其他交互 */
+}
+
+.menu.open {
+    display: block;
+    opacity: 1; /* 使其完全可见 */
+    pointer-events: auto; /* 允许交互 */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px; /* 增加上边距使其与导航栏保持距离 */
+}
+
+.menu li {
+    margin-bottom: 0px; /* 每个链接之间有一些间距 */
+    text-align: left; /* 居中文本 */
+    margin-left: 10px;
+}
+
+.menu a {
+    display: block;
+    color: #232A2B;
+    text-decoration: none;
+    padding: 10px; /* 添加一些内边距，使其更易点击 */
+}
+
+/* 弹出菜单中的选中状态样式 */
+.menu .active {
+    color: #6C54FF;
+    font-weight: bold;
+}
+
+.menu button {
+    display: block;
+    margin-left: 10px;  /* 左对齐 */
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+@media (min-width: 769px) {
+    .menu {
+        display: none !important; /* 用!important确保这个样式有最高的优先级 */
+    }
 }

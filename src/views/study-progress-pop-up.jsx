@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import '../styles/css/popup-styles.css';
 
-const CourseCard = ({ course, onConfirm }) => {
+const CourseCard = ({course, onConfirm, isCompleted, setCompletedCourses}) => {
     const [showConfirm, setShowConfirm] = useState(false);
-    const [isCompleted, setIsCompleted] = useState(false);
+    // const [isCompleted, setIsCompleted] = useState(false);
 
     const handleEditClick = () => setShowConfirm(true);
 
     const handleConfirm = () => {
         const ectsChange = isCompleted ? -course.ects : course.ects;
         onConfirm(ectsChange);
-        setIsCompleted(!isCompleted);
+        setCompletedCourses(prev => ({
+            ...prev,
+            [course.code]: !isCompleted
+        }));
         setShowConfirm(false);
     };
 
@@ -18,20 +21,26 @@ const CourseCard = ({ course, onConfirm }) => {
         <div className={`card ${isCompleted ? 'completed' : ''}`}>
             {showConfirm && (
                 <div className="confirmation">
-                    {isCompleted ? "Als unerledigt markiert?" : "Als erledigt markiert?"}
-                    <button onClick={() => setShowConfirm(false)}>Abbrechen</button>
-                    <button onClick={handleConfirm}>Ja</button>
+                    <p className="confirmation-text">{isCompleted ? "Als unerledigt markiert?" : "Als erledigt markiert?"}</p>
+                    <div className="button-container">
+                        <button className="cancel-button" onClick={() => setShowConfirm(false)}>Abbrechen</button>
+                        <button className="confirm-button" onClick={handleConfirm}>Ja</button>
+                    </div>
                 </div>
+
             )}
             <button className="card-edit" onClick={handleEditClick}>Bearbeiten</button>
             <p className="card-code">{course.code}</p>
             <p className="card-title">{course.title}</p>
+            <div className="marker-box">
+                <div className={`marker ${isCompleted ? 'completed' : ''}`}>{isCompleted ? 'Erledigt' : ''}</div>
+            </div>
             <p className="card-ects">{course.ects} ECTS</p>
         </div>
     );
 };
 
-const PopUp = ({ onClose, data, onECTSChange, setMaxValue }) => {
+const PopUp = ({onClose, data, onECTSChange, setMaxValue, currentValue, completedCourses, setCompletedCourses}) => {
     const totalECTS = Object.values(data).reduce((total, categoryCourses) => {
         const categoryECTS = categoryCourses.reduce((categoryTotal, course) => {
             return categoryTotal + course.ects;
@@ -51,13 +60,18 @@ const PopUp = ({ onClose, data, onECTSChange, setMaxValue }) => {
         <div onClick={(e) => e.stopPropagation()} className="popup-container">
             <button onClick={onClose} className="close-button">X</button>
             <p className="titel">Dein Studienfortschritt:</p>
-            <h2 className="data">{onECTSChange}/{totalECTS} ECTS ({(onECTSChange / totalECTS * 100).toFixed(2)}%)</h2>
+            <h2 className="data">{currentValue}/{totalECTS} ECTS ({(currentValue / totalECTS * 100).toFixed(1)}%)</h2>
             {Object.keys(data).map(category => (
                 <div key={category} className="category-container">
                     <p className="category-title">(Studiengang: {category})</p>
                     <div className="card-container">
                         {data[category].map(course => (
-                            <CourseCard key={course.code} course={course} onConfirm={handleECTSChange} />
+                            <CourseCard key={course.code}
+                                        course={course}
+                                        onConfirm={handleECTSChange}
+                                        isCompleted={completedCourses[course.code]}
+                                        setCompletedCourses={setCompletedCourses}
+                            />
                         ))}
                     </div>
                 </div>
@@ -65,5 +79,6 @@ const PopUp = ({ onClose, data, onECTSChange, setMaxValue }) => {
         </div>
     );
 };
+
 
 export default PopUp;

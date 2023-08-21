@@ -14,6 +14,8 @@ function Dashboard() {
 
     const [showPopUp, setShowPopUp] = useState(false);
 
+    const [completedCourses, setCompletedCourses] = useState({});
+
     return (
         <div className="dashboard-body">
             <div className="greetings">
@@ -27,6 +29,7 @@ function Dashboard() {
                 </div>
                 <div className="progress-body">
                     <div className="progress-box-1" onClick={() => setShowPopUp(true)}>
+                        <p className="progress-value">{(currentValue/maxValue * 100).toFixed(1)}%</p>
                         <div className="progress-graphic">
                             <ProgressBar max={maxValue} value={currentValue} />
                         </div>
@@ -36,6 +39,9 @@ function Dashboard() {
                                 data={jsonData}
                                 onECTSChange={setCurrentValue}
                                 setMaxValue={setMaxValue}
+                                currentValue={currentValue}
+                                completedCourses={completedCourses}
+                                setCompletedCourses={setCompletedCourses}
                             />
                         )}
                         <div className="progress-text">Dein Studienfortschritt</div>

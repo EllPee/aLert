@@ -40,6 +40,9 @@ body {
     color: #232A2B;
     text-decoration: none;
 }
+.nav-rechts a:hover{
+    color: #6C54FF;
+}
 
 .nav-rechts .active {
     color: #6C54FF;
@@ -109,6 +112,10 @@ body {
 .menu .active {
     color: #6C54FF;
     font-weight: bold;
+}
+
+.menu a:hover{
+    color: #6C54FF;
 }
 
 .menu button {

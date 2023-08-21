@@ -45,7 +45,10 @@
 }
 
 .progress-box-1 {
-    display: block;
+    display: flex; /* 设置为 Flexbox 容器 */
+    flex-direction: column; /* 垂直方向堆叠子元素 */
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center;
     background-color: #edeff0;
     width: 250px;
     height: 160px;
@@ -63,7 +66,7 @@
     padding-top: 10px;
     /*padding-left: 25px;*/
     /*padding-right: 25px;*/
-    height: 55%;
+    height: 20%;
     margin-bottom: 10px;
     text-align: center;
     display: flex;
@@ -76,4 +79,9 @@
     color: #5C6D72;
     font-weight: bold;
     text-align: center;
+}
+.progress-value{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
 }

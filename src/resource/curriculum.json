@@ -1,0 +1,144 @@
+{
+  "basa_online": [
+    {
+      "code": "o 1",
+      "title": "Geschichte, Theoriezugänge und Struktur Sozialer Arbeit",
+      "ects": 10
+    },
+    {
+      "code": "o 2",
+      "title": "Einführung in die Rechtsgebiete der Sozialen",
+      "ects": 5
+    },
+    {
+      "code": "o 3",
+      "title": "Familie: Eine multidisziplinäre Einführung",
+      "ects": 5
+    },
+    {
+      "code": "o 4",
+      "title": "Arbeit: Eine multidisziplinäre Einführung",
+      "ects": 5
+    },
+    {
+      "code": "o 5",
+      "title": "Einführung in Existenzsicherungsrecht und Verwaltungsrecht",
+      "ects": 5
+    },
+    {
+      "code": "o 6",
+      "title": "Soziale Gerechtigkeit: Eine multidisziplinäre Einführung",
+      "ects": 5
+    },
+    {
+      "code": "o 7",
+      "title": "Inklusion/Exklusion: Eine multidisziplinäre Einführung",
+      "ects": 5
+    },
+    {
+      "code": "o 8",
+      "title": "Einführung in das gewählte Arbeitsfeld/Arbeitsbereich: Soziale Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "o 9",
+      "title": "Lebenswelten und Methoden der Sozialen Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "o 10",
+      "title": "Sozialpädagogische Herausforderungen, Konzepte und Interventionen in der Sozialen Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "o 11",
+      "title": "Organisation und Management Sozialer Arbeit",
+      "ects": 10
+    },
+    {
+      "code": "o 12",
+      "title": "Familienrecht und Kinder- und Jugendhilferecht im Kontext Sozialer Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "o 13",
+      "title": "Projektplanung und Evaluation",
+      "ects": 5
+    },
+    {
+      "code": "o 14",
+      "title": "Sozialraumorientierung und Netzwerkarbeit",
+      "ects": 5
+    },
+    {
+      "code": "o 15",
+      "title": "Ö̈konomische Aspekte in der Sozialen Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "o 16",
+      "title": "Soziale Arbeit und Gesundheit: Prävention und Gesundheitsförderung",
+      "ects": 5
+    },
+    {
+      "code": "o 17",
+      "title": "Sozialpolitik und transnationale Bezüge Sozialer Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "P 1",
+      "title": "Einführung in das wissenschaftliche Arbeiten",
+      "ects": 5
+    },
+    {
+      "code": "P 2",
+      "title": "Einführung in Methoden der Sozialen Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "P 3",
+      "title": "Spezifische Methoden der Sozialen Arbeit: Kreativität und Medienpädagogik",
+      "ects": 5
+    },
+    {
+      "code": "P 4",
+      "title": "Gesprächsführung und Beratung in der Sozialen Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "P 5",
+      "title": "Diversität: Methodische Ansätze in der Sozialen Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "P 6",
+      "title": "Spezifische Methoden der Sozialen Arbeit in Krisen und Konflikten",
+      "ects": 5
+    },
+    {
+      "code": "P 7",
+      "title": "Ethik und professionelles Handeln in der Sozialen Arbeit",
+      "ects": 5
+    },
+    {
+      "code": "P 8",
+      "title": "Profession und Disziplin: Theorien Sozialer Arbeit und deren Bezug zu Praxisfeldern",
+      "ects": 5
+    },
+    {
+      "code": null,
+      "title": "Theorieprojekt",
+      "ects": 10
+    },
+    {
+      "code": null,
+      "title": "Praxisprojekt",
+      "ects": 20
+    },
+    {
+      "code": null,
+      "title": "Abschlussmodul",
+      "ects": 15
+    }
+  ]
+}

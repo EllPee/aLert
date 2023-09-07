@@ -28,7 +28,7 @@ function Progress({
     return (
         <div>
             <div className="progress-titel">
-                <h3>Dein Lehrfortschritt</h3>
+                <h3>Dein Lernfortschritt</h3>
                 <a className="progress-edit">Bearbeiten</a>
             </div>
             <div className="progress-body">

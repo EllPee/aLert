@@ -65,7 +65,7 @@ function Home() {
                             </button>
                         </div>
                         <input type="submit" className="btn" value="Anmelden"/>
-                        <p className="ps-vergessen">Password vergessen?</p>
+                        <p className="ps-vergessen">Passwort vergessen?</p>
                     </form>
                 </div>
             </div>

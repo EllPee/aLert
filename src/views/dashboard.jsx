@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import '../styles/css/dashboard.css';
+import '../styles/css/todo-and-quicklink.css'
 import Progress from './progress';
 import jsonData from '../resource/curriculum.json';
 
 function Dashboard() {
-    const [userName, setUserName] = useState('Mustermann');
-    const [motivation, setMotivation] = useState('Bist du voll motiviert?');
+    const [userName, setUserName] = useState('Alex');
+    const [motivation, setMotivation] = useState('Behalte den Überblick und bleib motiviert!');
 
     const [maxValue, setMaxValue] = useState(100); // totalECTS
     const [currentValue, setCurrentValue] = useState(0); // isECTS
@@ -30,17 +31,22 @@ function Dashboard() {
                 setCompletedCourses={setCompletedCourses}
                 jsonData={jsonData}
             />
-            <div>
+
+            <div className="flex-container">
                 <div>
-                    <h3>TODO</h3>
+                    <div>
+                        <h3>TODO</h3>
+                    </div>
+                    <div className="widget-box-1">
+                        <div></div>
+                    </div>
                 </div>
-                <div>容器</div>
-            </div>
-            <div>
                 <div>
-                    <h3>Quicklinks</h3>
+                    <div>
+                        <h3>Quicklinks</h3>
+                    </div>
+                    <div className="widget-box-1"></div>
                 </div>
-                <div>容器</div>
             </div>
         </div>
     );

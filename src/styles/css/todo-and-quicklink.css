@@ -1,0 +1,30 @@
+
+.flex-container {
+    display: flex; /* 使用 Flexbox */
+    /*justify-content: ; !* 两个元素之间留有空间 *!*/
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* 当屏幕宽度小于或等于 768px 时，元素将垂直排列 */
+        align-items: center; /* 可选：居中对齐 */
+    }
+}
+
+.widget-box-1 {
+    display: flex; /* 设置为 Flexbox 容器 */
+    flex: 0 0 auto; /* Dies stellt sicher, dass das Element seine Größe behält und nicht gestreckt wird */
+    flex-direction: column; /* 垂直方向堆叠子元素 */
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center;
+    background-color: #edeff0;
+    width: 520px;
+    height: 350px;
+    margin-right: 20px;
+    border-radius: 25px;
+    transition: box-shadow 0.3s;
+}
+
+.widget-box-1:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}

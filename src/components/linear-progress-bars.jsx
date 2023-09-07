@@ -4,7 +4,7 @@ import LinearProgressBar from './linear-progress-bar';
 const LinearProgressBars = () => {
     // Simulieren die von der API abgerufenen Daten
     const [progressData, setProgressData] = useState([
-        {moduleName: 'Eins', expected: 100, actual: 45},
+        {moduleName: 'Eins', expected: 100, actual: 10},
         {moduleName: 'Zwei', expected: 90, actual: 20},
         {moduleName: 'Drei', expected: 80, actual: 40},
     ]);

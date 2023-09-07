@@ -10,7 +10,7 @@ const CircularProgressBar = (props) => {
 
     // 为了模拟，我们使用以下数据：
     const moduleName = "Sample Module";
-    const actualCount = 30;
+    const actualCount = 10;
     const totalCount = 100;
 
     const percentage = (actualCount / totalCount) * 100;

@@ -4,6 +4,7 @@ import '../styles/css/home.css'; // 导入样式文件
 import beispielBild from '../styles/img/beispiel.jpg'; // 导入图片
 import anzeigerIcon from '../styles/img/anzeiger.svg'; // 导入显示密码的图标
 import anzeiger1Icon from '../styles/img/anzeiger-1.svg'; // 导入另一个显示密码的图标
+import logoGif from '../styles/img/alert-logo-animation-ohne-hintergrund.gif';
 
 function Home() {
     const [showPassword, setShowPassword] = useState(false);
@@ -22,6 +23,7 @@ function Home() {
         navigate('/dashboard');  // 跳转到/dashboard路由
     };
 
+
     return (
         <div className="page-content">
             <div className="left-section">
@@ -29,6 +31,11 @@ function Home() {
             </div>
             <div className="right-section">
                 <div className="login-box">
+                    <img
+                        src={logoGif} // 使用.gif文件
+                        alt="Example"
+                        className="logo-gif"
+                    />
                     <h1>In OpenOlat anmelden</h1>
                     <p className="login-text">Bitte verwenden Sie Ihren OpenOlat-Anmeldenamen und Ihr Passwort.</p>
                     <form onSubmit={handleSubmit}>

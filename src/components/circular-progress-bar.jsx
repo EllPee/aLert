@@ -9,7 +9,7 @@ const CircularProgressBar = (props) => {
     // const { moduleName, actualCount, totalCount } = data;
 
     // 为了模拟，我们使用以下数据：
-    const moduleName = "Sample Module";
+    const moduleName = "O 1 Geschichte, Theoriezugänge und Struktur Sozialer Arbeit";
     const actualCount = 10;
     const totalCount = 100;
 

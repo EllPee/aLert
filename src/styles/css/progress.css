@@ -73,8 +73,11 @@
 
 .progress-text {
     color: #5C6D72;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
+    padding: 0 10px;
+    white-space: normal;
 }
 
 .progress-value {

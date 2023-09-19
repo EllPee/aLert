@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../styles/css/dashboard.css';
 import '../styles/css/todo-and-quicklink.css'
 import Progress from './progress';
-import jsonData from '../resource/curriculum.json';
+import jsonData from '../resource/ModulhandbuchBASA.json';
 
 function Dashboard() {
     const [userName, setUserName] = useState('Alex');

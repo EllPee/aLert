@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import '../styles/css/home.css'; // 导入样式文件
-import beispielBild from '../styles/img/beispiel.jpg'; // 导入图片
-import anzeigerIcon from '../styles/img/anzeiger.svg'; // 导入显示密码的图标
-import anzeiger1Icon from '../styles/img/anzeiger-1.svg'; // 导入另一个显示密码的图标
+import '../styles/css/home.css'; // Importiere Stylesheet
+import beispielBild from '../styles/img/beispiel.jpg'; // Importiere Bild
+import anzeigerIcon from '../styles/img/anzeiger.svg'; // Importiere Anzeige-Passwort-Symbol
+import anzeiger1Icon from '../styles/img/anzeiger-1.svg'; // Importiere ein anderes Anzeige-Passwort-Symbol
 import logoGif from '../styles/img/alert-logo-animation-ohne-hintergrund.gif';
 
 function Home() {
@@ -17,32 +17,32 @@ function Home() {
 
     const navigate = useNavigate();
     const handleSubmit = (e) => {
-        e.preventDefault();  // 阻止默认的表单提交
-        // ... 验证和其他操作
+        e.preventDefault();  // Verhindere das Standardformularsubmit
+        // ... Überprüfung und andere Operationen
 
-        navigate('/dashboard');  // 跳转到/dashboard路由
+        navigate('/dashboard');  // Navigiere zur /dashboard-Route
     };
 
 
     return (
         <div className="page-content">
             <div className="left-section">
-                <img src={beispielBild} alt="Example" className="rounded-image"/>
+                <img src={beispielBild} alt="Beispiel" className="rounded-image"/>
             </div>
             <div className="right-section">
                 <div className="login-box">
                     <img
-                        src={logoGif} // 使用.gif文件
-                        alt="Example"
+                        src={logoGif} // Verwende .gif-Datei
+                        alt="Beispiel"
                         className="logo-gif"
                     />
-                    <h1>In OpenOlat anmelden</h1>
-                    <p className="login-text">Bitte verwenden Sie Ihren OpenOlat-Anmeldenamen und Ihr Passwort.</p>
+                    <h1>Melden Sie sich bei OpenOlat an</h1>
+                    <p className="login-text">Bitte verwenden Sie Ihren OpenOlat-Benutzernamen und Ihr Passwort.</p>
                     <form onSubmit={handleSubmit}>
                         <div className="textbox">
                             <input
                                 type="text"
-                                placeholder="Anmeldename"
+                                placeholder="Benutzername"
                                 required
                             />
                         </div>
@@ -59,7 +59,7 @@ function Home() {
                             >
                                 <img
                                     src={passwordIcon}
-                                    alt={showPassword ? "Verbergen" : "Anzeigen"}
+                                    alt={showPassword ? "Ausblenden" : "Anzeigen"}
                                     className="password-icon"
                                 />
                             </button>

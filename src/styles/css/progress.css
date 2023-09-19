@@ -1,10 +1,9 @@
 .progress-titel {
     margin-bottom: 10px;
-    display: flex; /* 启用 Flexbox 布局 */
-    justify-content: space-between; /* 将子元素推到容器的两端 */
-    align-items: center; /* 使子元素垂直居中 */
+    display: flex; /* Flexbox-Layout aktivieren */
+    justify-content: space-between; /* Platzierung der Unterelemente an den Enden des Containers */
+    align-items: center; /* Vertikale Ausrichtung der Unterelemente in der Mitte */
 }
-
 
 .progress-edit {
     font-size: 15px;
@@ -13,17 +12,17 @@
 
 .progress-body {
     display: flex;
-    justify-content: left;
+    justify-content: left; /* Links ausrichten */
     align-items: center;
-    overflow-x: auto; /* Ermöglicht das horizontale Scrollen */
-    white-space: nowrap; /* Verhindert den Zeilenumbruch im Container */
+    overflow-x: auto; /* Horizontales Scrollen ermöglichen */
+    white-space: nowrap; /* Zeilenumbruch im Container verhindern */
 }
 
 .progress-box-1 {
-    display: flex; /* 设置为 Flexbox 容器 */
-    flex: 0 0 auto; /* Dies stellt sicher, dass das Element seine Größe behält und nicht gestreckt wird */
-    flex-direction: column; /* 垂直方向堆叠子元素 */
-    justify-content: center; /* 水平居中对齐 */
+    display: flex; /* Als Flexbox-Container festlegen */
+    flex: 0 0 auto; /* Dies stellt sicher, dass das Element seine Größe beibehält und nicht gestreckt wird */
+    flex-direction: column; /* Unterelemente vertikal stapeln */
+    justify-content: center; /* Horizontal zentrierte Ausrichtung */
     align-items: center;
     background-color: #edeff0;
     width: 250px;
@@ -34,30 +33,26 @@
 }
 
 .progress-box-1:hover {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Schatten hinzufügen */
 }
 
 .progress-graphic {
     width: 100%;
     padding-top: 10px;
-    /*padding-left: 25px;*/
-    /*padding-right: 25px;*/
     height: 20%;
     margin-bottom: 10px;
     text-align: center;
     display: flex;
-    justify-content: center; /* 在主轴上居中对齐 */
+    justify-content: center; /* Auf der Hauptachse zentriert ausrichten */
     align-items: center;
     color: #5C6D72;
 }
-
 
 .progress-graphic-bars {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .progress-circular {
     width: 85px;
@@ -77,7 +72,7 @@
     font-weight: bold;
     text-align: center;
     padding: 0 10px;
-    white-space: normal;
+    white-space: normal; /* Zeilenumbruch erlauben */
 }
 
 .progress-value {

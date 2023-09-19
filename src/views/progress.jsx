@@ -52,7 +52,7 @@ function Progress({
                 </div>
                 <CircularProgressBar style={{flex: "0 0 auto"}}/>
                 <LinearProgressBars style={{flex: "0 0 auto"}}/>
-                <CircularProgressBar style={{flex: "0 0 auto"}}/>
+                <ActivityTrendChart/>
             </div>
         </div>
     );

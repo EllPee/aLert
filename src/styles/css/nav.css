@@ -25,37 +25,38 @@ body {
     width: 100px;
 }
 
-.nav-right {
+.nav-rechts {
     list-style: none;
     display: flex;
 }
 
-.nav-right li {
+.nav-rechts li {
     width: 85px;
     text-align: center;
 }
 
-.nav-right a {
+.nav-rechts a {
     display: block;
     color: #232A2B;
     text-decoration: none;
 }
-.nav-right a:hover{
+
+.nav-rechts a:hover {
     color: #6C54FF;
 }
 
-.nav-right .active {
+.nav-rechts .active {
     color: #6C54FF;
     font-weight: bold;
 }
 
 .nav-icon {
-    display: none; /* Standardmäßig ausblenden */
+    display: none;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .nav-right {
+    .nav-rechts {
         display: none;
     }
 
@@ -77,27 +78,27 @@ body {
     height: 100vh;
     background-color: #F5F6F7;
     z-index: 1000;
-    transition: opacity 0.3s ease-in-out; /* Füge Fade-In-/Fade-Out-Effekt hinzu */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Füge Schatten auf der linken Seite hinzu */
-    opacity: 0; /* Standardmäßig transparent */
-    pointer-events: none; /* Verhindere Beeinflussung anderer Interaktionen */
+    transition: opacity 0.3s ease-in-out; /* Hinzufügen eines Einblend-/Ausblendeffekts */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Hinzufügen eines Schattens auf der linken Seite */
+    opacity: 0;
+    pointer-events: none; /* Verhinderung von Interferenzen mit anderen Interaktionen */
 }
 
 .menu.open {
     display: block;
-    opacity: 1; /* Vollständig sichtbar machen */
-    pointer-events: auto; /* Aktiviere Interaktionen */
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .menu ul {
     list-style: none;
     padding: 0;
-    margin-top: 10px; /* Füge oberen Abstand hinzu, um Abstand zur Navbar zu schaffen */
+    margin-top: 10px; /* Vergrößern Sie den oberen Rand, um ihn von der Navigationsleiste zu entfernen */
 }
 
 .menu li {
-    margin-bottom: 0px; /* Einige Abstände zwischen den Links */
-    text-align: left; /* Text linksbündig ausrichten */
+    margin-bottom: 0; /* Etwas Abstand zwischen den einzelnen Links */
+    text-align: left;
     margin-left: 10px;
 }
 
@@ -105,22 +106,22 @@ body {
     display: block;
     color: #232A2B;
     text-decoration: none;
-    padding: 10px; /* Füge etwas Polsterung hinzu, um die Klickbarkeit zu verbessern */
+    padding: 10px; /* Fügen Sie einige innere Ränder hinzu, damit es besser anklickbar ist */
 }
 
-/* Stil für ausgewählte Elemente im Popup-Menü */
+/* Stil des ausgewählten Status im Popup-Menü */
 .menu .active {
     color: #6C54FF;
     font-weight: bold;
 }
 
-.menu a:hover{
+.menu a:hover {
     color: #6C54FF;
 }
 
 .menu button {
     display: block;
-    margin-left: 10px;  /* Links ausrichten */
+    margin-left: 10px;
     margin-top: 10px;
     background-color: #ffffff;
     border: none;
@@ -131,6 +132,8 @@ body {
 
 @media (min-width: 769px) {
     .menu {
-        display: none !important; /* Mit !important sicherstellen, dass dieser Stil die höchste Priorität hat */
+        display: none !important;
+        /* Verwenden Sie !important, um sicherzustellen,
+               dass dieser Stil die höchste Priorität hat */
     }
 }

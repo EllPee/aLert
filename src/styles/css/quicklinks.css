@@ -1,0 +1,155 @@
+.widget-box-2 {
+    display: flex; /* Als Flexbox-Container festlegen */
+    flex: 0 0 auto; /* Dies stellt sicher, dass das Element seine Größe beibehält und nicht gestreckt wird */
+    flex-direction: column; /* Unterelemente vertikal stapeln */
+    justify-content: center; /* Horizontale Ausrichtung zentrieren */
+    align-items: flex-end;
+    background-color: #edeff0;
+    width: 520px;
+    height: 350px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    transition: box-shadow 0.3s;
+}
+
+.widget-box-2:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Schatten hinzufügen */
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 310px; /* Entspricht der Höhe von .widget-box-2 */
+    overflow-y: auto; /* Zeige vertikalen Scrollbalken, wenn der Inhalt überläuft */
+}
+
+.link-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%; /* Setze die Breite auf 90% von .widget-box-1 */
+    margin: 0 auto; /* Zentriere das Element */
+    padding: 10px 0; /* Etwas Platz oben und unten lassen */
+    font-weight: bold;
+}
+
+.link-row a {
+    color: #5C6D72;
+    text-decoration: none;
+    font-size: 14px;
+    flex-grow: 1; /* Lasse den Link den verfügbaren horizontalen Platz ausfüllen */
+}
+
+.link-row .button-group {
+    display: flex;
+    align-items: center;
+}
+
+.link-row .button-group button {
+    margin-left: 15px; /* Füge etwas linken Abstand für die Schaltflächen hinzu */
+    border: none;
+    border-radius: 15px; /* Abrunde die Ecken */
+    padding: 2px 10px; /* Innenabstand */
+    color: white; /* Textfarbe */
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Lila Bearbeiten-Schaltfläche */
+.link-row .button-group button:nth-child(1) {
+    background-color: #6C54FF;
+}
+
+/* Rote Löschen-Schaltfläche */
+.link-row .button-group button:nth-child(2) {
+    background-color: #FC532D;
+}
+
+.arrow-icon {
+    color: #5C6D72;
+    font-weight: normal;
+}
+
+/* Stil der Trennlinie zwischen Links */
+.widget-box-2 hr {
+    width: 85%; /* Setze auf 90% von .widget-box-1 */
+    margin: 2px auto; /* Zentriere die Linie */
+    border-color: #CED0D2;
+}
+
+/* Stil der runden Plus-Schaltfläche */
+.button-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Runde Form */
+    background-color: #232A2B; /* Schwarzer Hintergrund */
+    color: white; /* Weiße Schrift */
+    display: flex; /* Zentriere das Plus-Symbol mit Flexbox */
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Schriftgröße anpassen */
+    border: none; /* Entferne den Standardrahmen */
+    cursor: pointer; /* Zeige die Handcursorform */
+    margin-top: 20px;
+}
+
+.button-edit {
+    margin: 20px 30px 0 0;
+    background-color: transparent; /* Farbe anpassen, falls erforderlich */
+    border: none;
+    color: #6C54FF;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: #F5F6F7;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 400px;  /* Breite anpassen */
+    border-radius: 15px;  /* Abrunde das Rechteck */
+}
+
+.popup label {
+    display: flex;  /* Flexbox-Layout verwenden */
+    flex-direction: column;  /* Anordnen der Unterelemente in Spalte */
+    align-items: flex-start;  /* Linksbündige Ausrichtung */
+    width: 100%;  /* Breite des Labels */
+    margin-bottom: 20px;  /* Vertikaler Abstand */
+    font-size: 14px;
+}
+
+.popup input {
+    width: 100%;  /* Breite des Eingabefelds */
+    padding: 10px;  /* Innenabstand des Eingabefelds */
+    margin-top: 5px;  /* Abstand zwischen Eingabefeld und Label */
+    border: none;  /* Kein Rahmen um das Eingabefeld */
+    border-radius: 15px;  /* Abrunde die Ecken des Eingabefelds */
+    box-sizing: border-box;  /* Stellen Sie sicher, dass die Breite den Rahmen und den Innenabstand einschließt */
+}
+
+.popup button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #16CC7D;
+    color: white;
+    font-size: 12px;
+}
+
+.popup button:last-child {
+    background-color: #5C6D72;  /* Farbe der Abbruchschaltfläche */
+}

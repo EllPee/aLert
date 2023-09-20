@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import '../styles/css/dashboard.css';
-import '../styles/css/todo-and-quicklink.css'
+import '../styles/css/todo.css'
 import Progress from './progress';
 import jsonData from '../resource/ModulhandbuchBASA.json';
+import Quicklinks from "./quicklinks";
 
 function Dashboard() {
     const [userName, setUserName] = useState('Alex');
@@ -45,7 +46,7 @@ function Dashboard() {
                     <div>
                         <h3>Quicklinks</h3>
                     </div>
-                    <div className="widget-box-1"></div>
+                    <Quicklinks />
                 </div>
             </div>
         </div>

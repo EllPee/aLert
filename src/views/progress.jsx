@@ -30,7 +30,8 @@ function Progress({
         <div>
             <div className="progress-titel">
                 <h3>Dein Lernfortschritt</h3>
-                <a className="progress-edit">Bearbeiten</a>
+                {/*<a className="progress-edit">Bearbeiten</a>*/}
+                {/*Schaltflächen, die im Moment nicht interaktiv sind, werden auskommentiert.*/}
             </div>
             <div className="progress-body">
                 <div className="progress-box-1" onClick={() => setShowPopUp(true)}>

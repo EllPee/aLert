@@ -11,7 +11,6 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     overflow: auto;
-
 }
 
 .titel {
@@ -33,6 +32,6 @@
 
 .card-container {
     display: flex;
-    flex-wrap: wrap; /* 允许卡片自动换行 */
-    gap: 20px; /* 控制卡片之间的间距 */
+    flex-wrap: wrap; /* Erlaubt Karten automatisches Umbruchverhalten */
+    gap: 20px; /* Steuert den Abstand zwischen den Karten */
 }

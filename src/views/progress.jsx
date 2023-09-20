@@ -18,18 +18,20 @@ function Progress({
                       setCompletedCourses,
                       jsonData,
                   }) {
-    // 模拟数据
-    const expected = 100; // 示例数据
-    const actual = 75;    // 示例数据
-    const moduleName = "Module Name"; // 示例数据
-    // 获取真实的API数据
-    // const { expected, actual, moduleName } = await fetchData();
+
+    // Simulierte Daten:
+    const expected = 100; // Beispieldaten
+    const actual = 75;    // Beispieldaten
+    const moduleName = "Modulname"; // Beispieldaten
+// Holen Sie die tatsächlichen API-Daten:
+// const { expected, actual, moduleName } = await fetchData();
 
     return (
         <div>
             <div className="progress-titel">
-                <h3>Dein Lehrfortschritt</h3>
-                <a className="progress-edit">Bearbeiten</a>
+                <h3>Dein Lernfortschritt</h3>
+                {/*<a className="progress-edit">Bearbeiten</a>*/}
+                {/*Schaltflächen, die im Moment nicht interaktiv sind, werden auskommentiert.*/}
             </div>
             <div className="progress-body">
                 <div className="progress-box-1" onClick={() => setShowPopUp(true)}>
@@ -52,7 +54,7 @@ function Progress({
                 </div>
                 <CircularProgressBar style={{flex: "0 0 auto"}}/>
                 <LinearProgressBars style={{flex: "0 0 auto"}}/>
-                <CircularProgressBar style={{flex: "0 0 auto"}}/>
+                <ActivityTrendChart/>
             </div>
         </div>
     );

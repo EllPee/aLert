@@ -40,7 +40,8 @@ body {
     color: #232A2B;
     text-decoration: none;
 }
-.nav-rechts a:hover{
+
+.nav-rechts a:hover {
     color: #6C54FF;
 }
 
@@ -50,7 +51,7 @@ body {
 }
 
 .nav-icon {
-    display: none; /* 默认隐藏 */
+    display: none;
     cursor: pointer;
 }
 
@@ -77,27 +78,27 @@ body {
     height: 100vh;
     background-color: #F5F6F7;
     z-index: 1000;
-    transition: opacity 0.3s ease-in-out; /* 添加淡入淡出效果 */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* 添加左侧的阴影 */
-    opacity: 0; /* 默认为透明 */
-    pointer-events: none; /* 防止干扰其他交互 */
+    transition: opacity 0.3s ease-in-out; /* Hinzufügen eines Einblend-/Ausblendeffekts */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Hinzufügen eines Schattens auf der linken Seite */
+    opacity: 0;
+    pointer-events: none; /* Verhinderung von Interferenzen mit anderen Interaktionen */
 }
 
 .menu.open {
     display: block;
-    opacity: 1; /* 使其完全可见 */
-    pointer-events: auto; /* 允许交互 */
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .menu ul {
     list-style: none;
     padding: 0;
-    margin-top: 10px; /* 增加上边距使其与导航栏保持距离 */
+    margin-top: 10px; /* Vergrößern Sie den oberen Rand, um ihn von der Navigationsleiste zu entfernen */
 }
 
 .menu li {
-    margin-bottom: 0px; /* 每个链接之间有一些间距 */
-    text-align: left; /* 居中文本 */
+    margin-bottom: 0; /* Etwas Abstand zwischen den einzelnen Links */
+    text-align: left;
     margin-left: 10px;
 }
 
@@ -105,22 +106,22 @@ body {
     display: block;
     color: #232A2B;
     text-decoration: none;
-    padding: 10px; /* 添加一些内边距，使其更易点击 */
+    padding: 10px; /* Fügen Sie einige innere Ränder hinzu, damit es besser anklickbar ist */
 }
 
-/* 弹出菜单中的选中状态样式 */
+/* Stil des ausgewählten Status im Popup-Menü */
 .menu .active {
     color: #6C54FF;
     font-weight: bold;
 }
 
-.menu a:hover{
+.menu a:hover {
     color: #6C54FF;
 }
 
 .menu button {
     display: block;
-    margin-left: 10px;  /* 左对齐 */
+    margin-left: 10px;
     margin-top: 10px;
     background-color: #ffffff;
     border: none;
@@ -131,6 +132,8 @@ body {
 
 @media (min-width: 769px) {
     .menu {
-        display: none !important; /* 用!important确保这个样式有最高的优先级 */
+        display: none !important;
+        /* Verwenden Sie !important, um sicherzustellen,
+               dass dieser Stil die höchste Priorität hat */
     }
 }

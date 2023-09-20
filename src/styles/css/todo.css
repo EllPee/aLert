@@ -1,0 +1,29 @@
+.flex-container {
+    display: flex; /* Verwende Flexbox */
+    /*justify-content: ; !* Lasse Platz zwischen den beiden Elementen *!*/
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* Wenn die Bildschirmbreite kleiner oder gleich 768px ist, werden die Elemente vertikal angeordnet */
+        align-items: center; /* Optional: Zentrierte Ausrichtung */
+    }
+}
+
+.widget-box-1 {
+    display: flex; /* Als Flexbox-Container festlegen */
+    flex: 0 0 auto; /* Dies stellt sicher, dass das Element seine Größe beibehält und nicht gestreckt wird */
+    flex-direction: column; /* Unterelemente vertikal stapeln */
+    justify-content: center; /* Horizontal zentrierte Ausrichtung */
+    align-items: center;
+    background-color: #edeff0;
+    width: 520px;
+    height: 350px;
+    margin-right: 20px;
+    border-radius: 25px;
+    transition: box-shadow 0.3s;
+}
+
+.widget-box-1:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Schatten hinzufügen */
+}

@@ -3,14 +3,14 @@ import {CircularProgressbar, buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 const CircularProgressBar = (props) => {
-    // 假设API返回的数据结构如下：
+    // Angenommen, die API gibt die folgende Datenstruktur zurück：
     // const apiResponse = await fetch("YOUR_API_ENDPOINT");
     // const data = await apiResponse.json();
     // const { moduleName, actualCount, totalCount } = data;
 
-    // 为了模拟，我们使用以下数据：
-    const moduleName = "Sample Module";
-    const actualCount = 30;
+    // Für die Simulation verwenden wir die folgenden Daten：
+    const moduleName = "O 1 Geschichte, Theoriezugänge und Struktur Sozialer Arbeit";
+    const actualCount = 10;
     const totalCount = 100;
 
     const percentage = (actualCount / totalCount) * 100;

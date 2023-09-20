@@ -72,7 +72,7 @@
     font-weight: bold;
 }
 
-/* 在合适的位置添加以下媒体查询 */
+/* Fügen Sie die folgenden Media Queries an geeigneten Stellen hinzu */
 @media (max-width: 767px) {
     .page-content {
         flex-direction: column;
@@ -91,8 +91,8 @@
     .right-section-content {
         display: flex;
         flex-direction: column;
-        align-items: center; /* 在垂直方向上居中 */
-        justify-content: center; /* 在水平方向上居中 */
+        align-items: center; /* Vertikal zentrieren */
+        justify-content: center; /* Horizontal zentrieren */
         height: 100%;
     }
 
@@ -101,7 +101,7 @@
     }
 }
 
-/* 在样式表中添加以下样式 */
+/* Fügen Sie die folgenden Stile in das Stylesheet ein */
 .password-toggle {
     position: relative;
     border: none;
@@ -119,3 +119,6 @@
     height: auto;
 }
 
+.logo-gif {
+    width: 30%;
+}

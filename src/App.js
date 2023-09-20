@@ -20,7 +20,7 @@ function App() {
             }
         };
         window.addEventListener('resize', handleResize);
-        // 清除事件监听器
+        // Ereignis-Listener löschen
         return () => {
             window.removeEventListener('resize', handleResize);
         };

@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Routes, Route, NavLink, } from 'react-router-do
 import './styles/css/nav.css';
 import Home from './views/home';
 import About from './views/about';
-import Help from './views/help';
 import Contact from './views/contact';
 import Dashboard from './views/dashboard';
 import alertLogo from "./styles/img/alert-logo.svg";
@@ -43,11 +42,7 @@ function App() {
                                 Über alert
                             </NavLink>
                         </li>
-                        <li>
-                            <NavLink to="/help" className={({isActive}) => isActive ? 'active' : ''}>
-                                Hilfe
-                            </NavLink>
-                        </li>
+
                         <li>
                             <NavLink to="/contact" className={({isActive}) => isActive ? 'active' : ''}>
                                 Kontakt
@@ -76,12 +71,7 @@ function App() {
                             Über alert
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/help" className={({isActive}) => isActive ? 'active' : ''}
-                                 onClick={() => setIsMenuOpen(false)}>
-                            Hilfe
-                        </NavLink>
-                    </li>
+
                     <li>
                         <NavLink to="/contact" className={({isActive}) => isActive ? 'active' : ''}
                                  onClick={() => setIsMenuOpen(false)}>
@@ -94,7 +84,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
-                <Route path="/help" element={<Help/>}/>
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
             </Routes>

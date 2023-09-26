@@ -35,11 +35,11 @@
     width: 75%; /* Setze die Breite auf 90% von .widget-box-1 */
     margin: 0 auto; /* Zentriere das Element */
     padding: 10px 0; /* Etwas Platz oben und unten lassen */
-    font-weight: bold;
+    /*font-weight: normal;*/
 }
 
 .link-row a {
-    color: #5C6D72;
+    color: #232A2B;
     text-decoration: none;
     font-size: 14px;
     flex-grow: 1; /* Lasse den Link den verfügbaren horizontalen Platz ausfüllen */
@@ -71,7 +71,7 @@
 }
 
 .arrow-icon {
-    color: #5C6D72;
+    color: #232A2B;
     font-weight: normal;
 }
 

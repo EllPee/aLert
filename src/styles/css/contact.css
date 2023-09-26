@@ -1,0 +1,14 @@
+
+.contact {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    /*background-color: #f5f5f5;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+}
+
+a[href^="mailto"] {
+    color: #ED6C36;
+    text-decoration: none; /* 可选：去除下划线 */
+}

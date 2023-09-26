@@ -4,6 +4,7 @@ import '../styles/css/todo.css'
 import Progress from './progress';
 import jsonData from '../resource/ModulhandbuchBASA.json';
 import Quicklinks from "./quicklinks";
+import Todos from "./todo";
 
 function Dashboard() {
     const [userName, setUserName] = useState('Alex');
@@ -38,15 +39,13 @@ function Dashboard() {
                     <div>
                         <h3>TODO</h3>
                     </div>
-                    <div className="widget-box-1">
-                        <div></div>
-                    </div>
+                    <Todos/>
                 </div>
                 <div>
                     <div>
                         <h3>Quicklinks</h3>
                     </div>
-                    <Quicklinks />
+                    <Quicklinks/>
                 </div>
             </div>
         </div>

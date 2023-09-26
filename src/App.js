@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Routes, Route, NavLink, } from 'react-router-dom';
 import './styles/css/nav.css';
-import Home from './views/home';
+import Start from './views/start';
 import About from './views/about';
 import Contact from './views/contact';
 import Dashboard from './views/dashboard';
@@ -82,7 +82,7 @@ function App() {
             </div>
 
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/" element={<Start/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>

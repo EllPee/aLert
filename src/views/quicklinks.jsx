@@ -17,15 +17,6 @@ function Quicklinks() {
     const [linkName, setLinkName] = useState('');
     const [linkUrl, setLinkUrl] = useState('');
 
-    const addQuickLink = () => {
-        if (linkName && linkUrl) {
-            setQuickLinks([...quickLinks, {name: linkName, url: linkUrl}]);
-            setLinkName('');
-            setLinkUrl('');
-            setShowLinkPopup(false);
-        }
-    };
-
     const toggleEditing = () => {
         setIsEditing(!isEditing);
         if (editingLink) setEditingLink(null);
@@ -68,20 +59,19 @@ function Quicklinks() {
                     <div style={{width: '100%'}} key={link.name}>
                         <div className="link-row">
                             <a href={link.url} target="_blank" rel="noopener noreferrer">{link.name}</a>
-                            <span className="arrow-icon">></span>
-                            {isEditing && (
+
+                            {isEditing ? (
                                 <div className="button-group">
                                     <button onClick={() => editLink(link)}>Ändern</button>
                                     <button onClick={() => deleteLink(link.name)}>Löschen</button>
                                 </div>
-                            )}
+                            ) : <span className="arrow-icon">></span>}
                         </div>
                         <hr/>
                     </div>
                 ))}
                 <button className="button-circle" onClick={() => setShowLinkPopup(true)}>+</button>
             </div>
-
             {showLinkPopup && (
                 <div className="popup">
                     <label>

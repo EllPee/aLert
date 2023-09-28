@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import '../styles/css/start.css'; // Importiere Stylesheet
-import beispielBild from '../styles/img/beispiel.jpg'; // Importiere Bild
+import beispielBild from '../styles/img/vorschau-bild.jpg'; // Importiere Bild
 import anzeigerIcon from '../styles/img/anzeiger.svg'; // Importiere Anzeige-Passwort-Symbol
 import anzeiger1Icon from '../styles/img/anzeiger-1.svg'; // Importiere ein anderes Anzeige-Passwort-Symbol
 import logoGif from '../styles/img/alert-logo-animation-ohne-hintergrund.gif';

@@ -43,7 +43,7 @@
     text-align: left;
     font-size: 40px;
     color: #ED6C36;
-    margin: 25px 0 10px 50px;
+    margin: 0 0 10px 50px;
     font-weight: bold;
 }
 
@@ -58,6 +58,7 @@
     cursor: pointer;
     display: inline-block; /* 确保tag-box作为内联元素 */
 }
+
 .tag-box.wichtig {
     background-color: #FC532D;
 }
@@ -134,15 +135,15 @@ button {
     border-color: #FEB09E;
 }
 
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999; /* To ensure it's below the popup */
-}
+/*.backdrop {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+/*    z-index: 999; !* To ensure it's below the popup *!*/
+/*}*/
 
 .popup {
     position: fixed;
@@ -160,4 +161,84 @@ button {
     /*flex-direction: column;*/
     /*align-items: center;*/
     /*justify-content: center;*/
+}
+
+.button-edit-1 {
+    margin: 20px 30px 0 430px;
+    background-color: transparent; /* Farbe anpassen, falls erforderlich */
+    border: none;
+    color: #6C54FF;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.todo-item .button-group {
+    display: flex;
+    align-items: center;
+}
+
+.todo-item .button-group button {
+    margin-left: 15px; /* Füge etwas linken Abstand für die Schaltflächen hinzu */
+    border: none;
+    border-radius: 15px; /* Abrunde die Ecken */
+    padding: 2px 10px; /* Innenabstand */
+    color: white; /* Textfarbe */
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Lila Bearbeiten-Schaltfläche */
+.todo-item .button-group button:nth-child(1) {
+    background-color: #6C54FF;
+}
+
+/* Rote Löschen-Schaltfläche */
+.todo-item .button-group button:nth-child(2) {
+    background-color: #FC532D;
+}
+
+.editing-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: #F5F6F7;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 400px;
+    border-radius: 15px;
+}
+.editing-popup input {
+    width: 100%;  /* Breite des Eingabefelds */
+    padding: 10px;  /* Innenabstand des Eingabefelds */
+    margin-top: 5px;  /* Abstand zwischen Eingabefeld und Label */
+    border: none;  /* Kein Rahmen um das Eingabefeld */
+    border-radius: 15px;  /* Abrunde die Ecken des Eingabefelds */
+    box-sizing: border-box;  /* Stellen Sie sicher, dass die Breite den Rahmen und den Innenabstand einschließt */
+}
+
+.editing-popup label {
+    display: flex;  /* Flexbox-Layout verwenden */
+    flex-direction: column;  /* Anordnen der Unterelemente in Spalte */
+    align-items: flex-start;  /* Linksbündige Ausrichtung */
+    width: 100%;  /* Breite des Labels */
+    margin-bottom: 20px;  /* Vertikaler Abstand */
+    font-size: 14px;
+}
+
+.editing-popup button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #16CC7D;
+    color: white;
+    font-size: 12px;
+}
+
+.editing-popup button:last-child {
+    background-color: #5C6D72;  /* Farbe der Abbruchschaltfläche */
 }

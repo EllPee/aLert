@@ -34,7 +34,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 20px; /* 为内容添加左侧内边距，确保内容不会紧贴边框 */
+    padding-left: 20px;
 }
 
 
@@ -56,7 +56,7 @@
     color: #fff;
     font-size: 12px;
     cursor: pointer;
-    display: inline-block; /* 确保tag-box作为内联元素 */
+    display: inline-block;
 }
 
 .tag-box.wichtig {
@@ -108,15 +108,15 @@ button {
 .todo-item label.todo-left {
     display: flex;
     align-items: center;
-    cursor: pointer; /* 使其看起来可以点击 */
+    cursor: pointer;
 }
 
-/* 隐藏原始复选框 */
+
 .todo-item input[type="checkbox"] {
     display: none;
 }
 
-/* 使用伪元素为复选框创建圆形边界 */
+
 .todo-item input[type="checkbox"] + span::before {
     content: '';
     display: inline-block;
@@ -129,7 +129,7 @@ button {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* 选中时的颜色 */
+
 .todo-item input[type="checkbox"]:checked + span::before {
     background-color: #ED6C36;
     border-color: #FEB09E;

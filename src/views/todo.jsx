@@ -4,7 +4,7 @@ import '../styles/css/todo.css';
 function Todos() {
     const [selectedTodo, setSelectedTodo] = useState(null);
     const [showPopup, setShowPopup] = useState(false);
-    const [completedTodos, setCompletedTodos] = useState(0); // 追踪已完成的TODO数量
+    const [completedTodos, setCompletedTodos] = useState(0);
     const [isEditing, setIsEditing] = useState(false);
     const [editingTodo, setEditingTodo] = useState(null);
 
@@ -69,7 +69,6 @@ function Todos() {
 
 
     const handleCheckboxChange = (event) => {
-        // 如果复选框被选中，增加已完成的TODO数量，否则减少
         event.target.checked ? setCompletedTodos(completedTodos + 1) : setCompletedTodos(completedTodos - 1);
     };
 
@@ -144,7 +143,7 @@ function Todos() {
             </button>
             <div className="inner-container">
                 <div className="todo-count">
-                    {todoData.length - completedTodos} {/* 显示未完成的TODO数量 */}
+                    {todoData.length - completedTodos} {/* Anzeige der Anzahl der ausstehenden TODOs */}
                 </div>
                 {todoData.map((todo, index) => (
                     <div key={index} className="todo-item">
